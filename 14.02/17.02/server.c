@@ -12,8 +12,7 @@
 
 #include "minitalk.h"
 
-
-int signal_handler(int signum)
+void signal_handler(int signum)
 {
     // The character and the index must be static because the signal handler is called multiple times.
     static char c = 0;
@@ -51,12 +50,12 @@ int signal_handler(int signum)
         // If the character is the null character, print a new line and reset the character and the index.
         // Why the null character? Because the client sends the null character to indicate the end of the message.
         if (c == '\0')
-            return (1);
-        ft_printf("%c", c);
+            ft_printf("\n");
+        else
+            ft_printf("%c", c);
         i = 0;
         c = 0;
     }
-    return (0);
 }
 
 
