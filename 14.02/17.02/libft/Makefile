@@ -31,10 +31,17 @@ SRCS=ft_bzero.c \
      ft_strmapi.c \
      ft_striteri.c \
      ft_putchar_fd.c \
+     ft_putchar.c\
      ft_putstr_fd.c \
+     ft_putstr.c\
      ft_putendl_fd.c \
      ft_putnbr_fd.c \
-     ft_itoa.c
+     ft_itoa.c\
+     ft_printf.c\
+     ft_putpointer.c\
+     ft_putnbr_base.c\
+     ft_putnbr_u.c\
+     ft_putnbr.c\
 
 OBJS = $(SRCS:.c=.o)
 
